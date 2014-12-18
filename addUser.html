@@ -1,0 +1,68 @@
+<!doctype html>
+<html ng-app = "myApp">
+  <head>
+    <script src="js/angular.min.js"></script>
+     <script src="js/addUser.js"></script>
+
+     <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+  </head>
+
+  <body>
+    <div ng-controller="TodoController">
+    <table class="table table-bordered">
+    <thread>
+    <tr>
+    <td>Name</td>
+    <td><input type="text" class="form-control" id="exampleInputEmail1" ng-model="UserName"></td> 
+    </tr>
+    <tr>
+    <td>Sec</td>
+    <td><input type="text" class="form-control" id="exampleInputEmail1" ng-model="NameCountry"></td>  
+    </tr>
+    <tr>
+    <td>Country</td>
+    <td><input type="text" class="form-control" id="exampleInputEmail1" ng-model="secName"></td>  
+    </tr>
+    <tr>
+    <td>Score</td>
+    <td><input type="text" class="form-control" id="exampleInputEmail1" ng-model="scoreName"></td>  
+    </tr>
+    </thread>
+   </table>
+    <button type="submit" class="btn btn-default" ng-click="add(UserName,NameCountry,secName,scoreName)">Submit</button>
+    <hr>
+
+
+    <table class="table table-bordered" >
+    <thead>
+      <tr>
+        <td>name</td>
+        <td>country</td>
+        <td>section</td>
+        <td>score</td>
+      </tr>
+</thead>
+      <tr ng-repeat="datas in User">
+        <td>{{datas.name}}</td>
+        <td>{{datas.country}}</td>
+        <td>{{datas.sec}}</td>
+        <td>{{datas.score}}</td>
+      </tr>
+    </table>
+</div>
+ </body>
+    
+
+
+  
+
+
+ 	
